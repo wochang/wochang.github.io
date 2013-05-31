@@ -1,8 +1,10 @@
 #lang scribble/base
-@(require scribble/manual racket/date)
+@(require scribble/manual 
+          scribble/core ; make-style
+          racket/date)
 @(require "util.rkt")
 
-@title{Nanny Paperwork (for Massachusetts)}
+@title[#:style 'boxed]{Nanny Paperwork (for Massachusetts)}
 
 @emph{Last updated:} @(date->string (current-date) #t)
 
@@ -38,7 +40,7 @@ Most insurance agencies should be able to help you sign up for assigned risk poo
 @section{First Day}
 
 On the first day, you may want to ask your nanny to bring the following items:
-@itemlist{
+@itemlist[
 @item{Social Security Card
       
 From @link["http://www.irs.gov/publications/p926/"]{IRS Publication 926, Household Employer's Tax Guide}:
@@ -54,11 +56,11 @@ You must ask for your employee's social security number no later than the first 
   An employee who does not have a social security number must apply for one on Form SS-5, Application for a Social Security Card. An employee who has lost his or her social security card or whose name is not correctly shown on the card may apply for a replacement card.
 
   
-Employees can get Form SS-5 from any Social Security Administration office or by calling 1-800-772-1213."}}}
+Employees can get Form SS-5 from any Social Security Administration office or by calling 1-800-772-1213."}}
 
-@itemlist{@item{ID(s) for I-9 form, ie passport, green card, driver's license, etc.}}
+@item{ID(s) for I-9 form, ie passport, green card, driver's license, etc.}]
 
-@subsection{@link["http://www.uscis.gov/portal/site/uscis/menuitem.5af9bb95919f35e66f614176543f6d1a/?vgnextoid=31b3ab0a43b5d010VgnVCM10000048f3d6a1RCRD&vgnextchannel=db029c7755cb9010VgnVCM10000045f3d6a1RCRD"]{Form I-9, Employment Eligibility Verification}}
+@subsection{USCIS @link["http://www.uscis.gov/portal/site/uscis/menuitem.5af9bb95919f35e66f614176543f6d1a/?vgnextoid=31b3ab0a43b5d010VgnVCM10000048f3d6a1RCRD&vgnextchannel=db029c7755cb9010VgnVCM10000045f3d6a1RCRD"]{Form I-9}, Employment Eligibility Verification}
 
 @nested[#:style 'inset]{Purpose of Form:
                         
@@ -68,19 +70,70 @@ Employees can get Form SS-5 from any Social Security Administration office or by
                         
 "Do not file Form I-9 with USCIS or U.S. Immigrations and Customs Enforcement (ICE). Employers must have a completed Form I-9 on file for each person on their payroll who is required to complete the form. Form I-9 must be retained and stored by the employer either for three years after the date of hire or for one year after employment is terminated, whichever is later. The form must be available for inspection by authorized U.S. Government officials from the Department of Homeland Security, Department of Labor, or Department of Justice."}
 
-@subsection{@link["http://www.irs.gov/uac/Form-W-4,-Employee%27s-Withholding-Allowance-Certificate-1"]{Form W-4, Employee's Withholding Allowance Certificate}}
+@subsection{IRS @link["http://www.irs.gov/uac/Form-W-4,-Employee%27s-Withholding-Allowance-Certificate-1"]{Form W-4}, Employee's Withholding Allowance Certificate}
 Use this form to determine how much federal tax to withhold from your nanny's paycheck. You don't need to file this form.
 
-@subsection{@link["http://www.mass.gov/dor/docs/dor/forms/wage-rpt/pdfs/m-4.pdf"]{Form M-4, MA Employee's Withholding Exemption Certificate}}
+@subsection{MA DOR @link["http://www.mass.gov/dor/docs/dor/forms/wage-rpt/pdfs/m-4.pdf"]{Form M-4}, Employee's Withholding Exemption Certificate}
 Use this form to determine how much state tax to withhold from your nanny's paycheck. You don't need to file this form either.
 
 @subsection{Vaccinations}
 You may want to ask your nanny for a vaccination record, or to get some vaccines. For example, there was a pertussis (whooping cough) outbreak at the time we were hiring our nanny and our pediatrician recommended vaccination.
 
-@; -------------------------- Paycheck / Withholding --------------------------
+
+
+
+@; -------------------------- Paycheck / Withholding Taxes --------------------------
 @section{Paycheck / Withholding Taxes}
 
+We pay our nanny bimonthly (twice a month). With each paycheck, we withhold a certain amount for taxes. Here are the different taxes we withhold:
+
+@centered{@tabular[#:style 'boxed
+         (list (list @bold{Tax Type}   @bold{2013 Rate} @bold{Limit})
+               (list "Social Security (OASDI)"   "6.2%" "$113,700")
+               (list "Medicare"  "1.45%" "no limit")
+               (list "Federal" "varies" "varies")
+               (list "MA State" "5.25%" "no limit"))]}
+
+To compute withholding for social security and medicare, just compute the percentage.
+
+For federal withholding, the IRS provides @link["http://www.irs.gov/publications/p15/ar03.html#en_US_2013_publink1000295957"]{tables} (Publication 15) to help with the calculations. MA also provides similar @link["http://www.mass.gov/dor/docs/dor/forms/wage-rpt/pdfs/circ-m12.pdf"]{tables} (circular M). 
+
+There are also @link["http://www.paycheckcity.com/calculator/salary/"]{paycheck calculators} available online that may be more convenient.
+
+
 @; ------------------------------- Paying Taxes -------------------------------
-@section{Tax Forms / Paying Taxes}
+@section{Paying Taxes}
+
+After withholding taxes, you have to pay the taxes within the appropriate time.
+
+@subsection{Paying MA State Taxes}
+
+@margin-note{MA employer taxes are paid @emph{quarterly}, so you don't need to do anything special when filing your @emph{annual} state tax return.}
+
+@subsubsection{Unemployment Tax}
+
+Paid quarterly, within a month after the end of the quarter.
+
+@subsubsection{Withheld Income Tax}
+
+Paid quarterly, within a month after the end of the quarter.
+
+
+@subsection{Paying Federal Taxes}
+
+
+
+NOTE: Even though we withheld and paid the taxes for our nanny on our tax return, she is still responsible for filing her own tax return.
+
+NOTE: The social security and medicare withholdings here is for the @emph{employee}. In addition, the we (the @emph{employer}) must pay matching amounts when filing our taxes (see next section).
+
+@subsection{A Note on the Nanny's @link["http://www.irs.gov/publications/p501/ar02.html#en_US_2012_publink1000220721"]{Filing Status}}
+
+Our nanny is a resident alien and is married, but her husband lives outside the US and does not have a social security number.
+
+@itemlist[
+@item{She cannot file as married unless the husband wants to get a social security number, etc.}
+@item{She has a son who lives with her and would be eligible to file as @link["http://www.irs.gov/publications/p501/ar02.html#en_US_2012_publink1000220775"]{head of household} except her son is over the @link["http://www.irs.gov/publications/p501/ar02.html#en_US_2012_publink1000220886"]{qualifying age.}}
+@item{Thus, our nanny has to file as single.}]
 
 @end-post{nannypaperwork}
