@@ -8,7 +8,7 @@
 
 @emph{Last updated:} @(date->string (current-date) #t)
 
-The purpose of this page is to aggregate all the paperwork needed to hire a nanny in Massachusetts.
+The purpose of this page is to describe all the paperwork needed to hire a nanny in Massachusetts.
 
 For general tips on hiring a nanny, see here:
 
@@ -77,7 +77,7 @@ Use this form to determine how much federal tax to withhold from your nanny's pa
 Use this form to determine how much state tax to withhold from your nanny's paycheck. You don't need to file this form either.
 
 @subsection{Vaccinations}
-You may want to ask your nanny for a vaccination record, or to get some vaccines. For example, there was a pertussis (whooping cough) outbreak at the time we were hiring our nanny and our pediatrician recommended vaccination.
+You may want to ask your nanny for a vaccination record, or to get some vaccines. For example, there was a pertussis (whooping cough) outbreak at the time we were hiring our nanny and our pediatrician recommended getting the TdaP vaccine.
 
 
 
@@ -85,16 +85,26 @@ You may want to ask your nanny for a vaccination record, or to get some vaccines
 @; -------------------------- Paycheck / Withholding Taxes --------------------------
 @section{Paycheck / Withholding Taxes}
 
-We pay our nanny bimonthly (twice a month). With each paycheck, we withhold a certain amount for taxes. Here are the different taxes we withhold:
+We pay our nanny bimonthly (twice a month). 
+
+@margin-note{The table lists the amounts withheld from the nanny's paycheck. In other words, these are the taxes that the nanny, i.e., the @emph{employee}, owes. You just pay it on the nanny's behalf. This is separate from the additional taxes that you, the @emph{employer}, has to pay.}
+
+With each paycheck, we withhold a certain amount for taxes.
 
 @centered{@tabular[#:style 'boxed
-         (list (list @bold{Tax Type}   @bold{2013 Rate} @bold{Limit})
-               (list "Social Security (OASDI)"   "6.2%" "$113,700")
-               (list "Medicare"  "1.45%" "no limit")
-               (list "Federal" "varies" "varies")
-               (list "MA State" "5.25%" "no limit"))]}
+         (list 
+          (list "Taxes Withheld (2013):" 'cont 'cont)
+           (list @bold{Tax Type}   @bold{Rate} @bold{Taxable Income})
+           (list "Social Security (OASDI)"   "6.2%" "$113,700")
+           (list "Medicare"  "1.45%" "all")
+           (list @link["http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Questions-and-Answers-for-the-Additional-Medicare-Tax"]{additional Medicare} "0.90%" ">$200,000")
+           (list "Federal" "varies" "all")
+           (list "MA State" "5.25%" "all"))]}
+
 
 To compute withholding for social security and medicare, just compute the percentage.
+
+@margin-note{You have to withhold social security and medicare taxes,  @link["http://www.irs.gov/publications/p926/ar02.html#en_US_2013_publink100086732"]{but I don't think withholding income tax is required}.}
 
 For federal withholding, the IRS provides @link["http://www.irs.gov/publications/p15/ar03.html#en_US_2013_publink1000295957"]{tables} (Publication 15) to help with the calculations. MA also provides similar @link["http://www.mass.gov/dor/docs/dor/forms/wage-rpt/pdfs/circ-m12.pdf"]{tables} (circular M). 
 
@@ -104,7 +114,7 @@ There are also @link["http://www.paycheckcity.com/calculator/salary/"]{paycheck 
 @; ------------------------------- Paying Taxes -------------------------------
 @section{Paying Taxes}
 
-After withholding taxes, you have to pay the taxes within the appropriate time.
+This section describes the taxes you have to pay, some of which are the withheld taxes from the last section.
 
 @subsection{Paying MA State Taxes}
 
@@ -112,20 +122,61 @@ After withholding taxes, you have to pay the taxes within the appropriate time.
 
 @subsubsection{Unemployment Tax}
 
-Paid quarterly, within a month after the end of the quarter.
+All employers in Massachusetts have to pay an Unemployment Insurance (UI) tax to the Division of Unemployment Assistance (DUA). The rate in 2012 was 2.83%. I also had to contribute to a Workforce Training Fund, at a rate of 0.060%.
+
+You pay online, through the @link["http://www.mass.gov/lwd/unemployment-insur/ui-online-dua-quest/"]{QUEST} system (I don't know what it stands for). @link["https://uionline.detma.org/Employer/Revenue/Registration/EmployerRegistration/RegisterEmployer.ASPX"]{Register first} to get a login. After that, you pay quarterly. Payment is due a month after the end of the quarter. After that, a fine is added to the amount you owe.
 
 @subsubsection{Withheld Income Tax}
 
-Paid quarterly, within a month after the end of the quarter.
+If you withhold state income tax from your nanny's paycheck, you pay it on her behalf to the MA Department of Revenue (DOR). This is done through their @link["https://wfb.dor.state.ma.us/webfile/Business/Public/Webforms/Login/Login.aspx"]{WebFile for Business} site. Again, you have to register first to get a login. Then, you again pay at the end of each quarter.
 
 
 @subsection{Paying Federal Taxes}
 
+@subsubsection{W-2}
+
+At the end of the year, you have to fill out and give your nanny an IRS @link["http://www.irs.gov/uac/Form-W-2,-Wage-and-Tax-Statement"]{Form W-2}, Wage and Tax Statement. Look at @link["http://www.irs.gov/instructions/iw2w3/index.html"]{these instructions} to determine where you have to submit this form.
+
+@subsubsection{Social Security and Medicare}
+
+Employers have to pay an additional @emph{employer's} social security and medicare tax. This is on top of the social security and medicare tax you withheld from the nanny's paycheck and will pay on the nanny's hehalf. 
+
+In 2013, the employer and employee social security and medicare tax rates were the same: 6.2% and 1.45%, respectively.
+
+There is no employer match for @link["http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Questions-and-Answers-for-the-Additional-Medicare-Tax"]{Additional Medicare Tax}.
+
+@subsubsection{FUTA}
+
+Employers have to pay a Federal Unemployment Tax (due to the @link["http://www.irs.gov/Individuals/International-Taxpayers/Federal-Unemployment-Tax"]{Federal Unemployment Tax Act (FUTA)}).
+
+The 2012 rate was 7.00% on the first $7,000.
+
+However, I think you get @link["http://www.irs.gov/Individuals/International-Taxpayers/Federal-Unemployment-Tax"]{FUTA credit} if you pay @link["http://www.mass.gov/lwd/unemployment-insur/ui-online-dua-quest/quest-project-info/system-faq/futa.html"]{state unemployment taxes}.
+
+Residents in a @link["http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/FUTA-Credit-Reduction"]{credit reduction state} get less FUTA credit but it seems like @link["http://en.wikipedia.org/wiki/FUTA_credit_reduction"]{Massachusetts is not one of these states.}
+
+@subsubsection{Schedule H}
+
+@margin-note{@bold{Note:} Even though we withheld and paid federal taxes for our nanny on our tax return, she is still responsible for filing her own tax return.}
+
+All the above federal taxes, in addition to the withheld social security, medicare, and federal income taxes for your nanny, are paid on your federal tax return, on a @link["http://www.irs.gov/instructions/i1040sh/"]{Schedule H} form. (If you use any sort of tax software, it should automatically get generated for you.)
+
+@subsection{Employer Taxes Summary}
+
+Here is a summary of all nanny taxes that employers have to pay.
+
+@centered{@tabular[#:style 'boxed
+         (list 
+          (list "Employer Taxes (2013):" 'cont 'cont  'cont)
+          (list @bold{Tax}   @bold{Rate} @bold{Taxable Income} @bold{How to Pay})
+          (list "MA Unemployment Insurance (UI)" "2.83%" "all"  @link["http://www.mass.gov/lwd/unemployment-insur/ui-online-dua-quest/"]{QUEST})
+          (list "MA Workforce Training Fund" "0.060%" "all" @link["http://www.mass.gov/lwd/unemployment-insur/ui-online-dua-quest/"]{QUEST})
+          (list "Social Security (OASDI)"   "6.20%" "$113,700" "tax return")
+          (list "Medicare"  "1.45%" "all" "tax return")
+          (list "Federal Unemployment (FUTA)*" "6.00%" "$7,000" "tax return"))]}
+* = may be reduced
 
 
-NOTE: Even though we withheld and paid the taxes for our nanny on our tax return, she is still responsible for filing her own tax return.
-
-NOTE: The social security and medicare withholdings here is for the @emph{employee}. In addition, the we (the @emph{employer}) must pay matching amounts when filing our taxes (see next section).
 
 @subsection{A Note on the Nanny's @link["http://www.irs.gov/publications/p501/ar02.html#en_US_2012_publink1000220721"]{Filing Status}}
 
@@ -136,4 +187,10 @@ Our nanny is a resident alien and is married, but her husband lives outside the 
 @item{She has a son who lives with her and would be eligible to file as @link["http://www.irs.gov/publications/p501/ar02.html#en_US_2012_publink1000220775"]{head of household} except her son is over the @link["http://www.irs.gov/publications/p501/ar02.html#en_US_2012_publink1000220886"]{qualifying age.}}
 @item{Thus, our nanny has to file as single.}]
 
+
+
+
+
+@; ------------------------------ Dependent Care FSA --------------------------
+@section{Dependent Care FSA}
 @end-post{nannypaperwork}
