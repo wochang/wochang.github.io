@@ -1,43 +1,76 @@
 #lang scribble/base
 @(require scribble/manual 
-          scribble/core ; make-style
+          scribble/core ; style, element
+          scribble/html-properties ; alt-tag, attributes
           racket/date)
 @(require "util.rkt")
 
-@title[#:style 'boxed]{Nanny Paperwork (for Massachusetts)}
+@(define nanny-title "Nanny Taxes and Paperwork Guide")
 
-@emph{Last updated:} @(date->string (current-date) #t)
+@(title #:tag "top" #:style 'hidden nanny-title)
 
-The purpose of this page is to describe all the paperwork needed to hire a nanny in Massachusetts.
+@centered{
+@(elem
+  @bold{@larger{@(larger nanny-title)}}
+  @(linebreak)
+  @emph{(For Massachusetts)}
+  #:style (style #f (list (alt-tag "div")
+                          (attributes
+                           (list (cons 'class "navsettop"))))))}
+  
+@margin-note{@emph{Last updated:@linebreak{}} @(date->string (current-date))}
 
-For general tips on hiring a nanny, see here:
+This page describes the taxes and paperwork you have to file when hiring a nanny.
 
-Also, you can hire someone to handle most of this paperwork for you if that's your preference. Googling for "nanny payroll service" @link["http://payroll.intuit.com/payroll_services/household_payroll.jsp"]{returns} @link["http://www.4nannytaxes.com/"]{lots}  @link["http://www.gtm.com/gtm_household/household.html"]{of} @link["http://www.savvynannypayrollservices.com/"]{options}.
+The state taxes are specific to Massachusetts only.
 
-I've roughly organized this guide to list the items in the order you'll need to handle them.
+This guide is for people who want to handle the paperwork themselves.
+
+If you don't want to deal with the paperwork, there are many companies that will manage things for you. Googling for "nanny payroll service" @link["http://payroll.intuit.com/payroll_services/household_payroll.jsp"]{returns} @link["http://www.4nannytaxes.com/"]{lots}  @link["http://www.gtm.com/gtm_household/household.html"]{of} @link["http://www.savvynannypayrollservices.com/"]{options}.
+
+The items in this guide are roughly organized in the order you'll need to handle them.
+
+
 
 @; ------------------------------ Before Hiring -------------------------------
 @section{Before Hiring}
 
-@subsection{Federal Employer Identification Number (EIN)}
-You need an EIN from the IRS when filing any kind of tax form. You also need it to get Workers' Compensation Insurance, which is mandatory in Massachusetts. For Massachusetts state tax forms, your federal EIN usually doubles as the state EIN.
+@; subsec: EIN ----------------------------------------
+@subsection[#:style style:subsec]{Federal Employer Identification Number (EIN)}
 
-How to get an EIN from the IRS:
+Before you can file any nanny taxes, you need to obtain an EIN from the IRS. 
+
+You'll also need this number when applying for Workers' Compensation Insurance (mandatory in Massachusetts) and when paying state taxes.
+
+Ways to get an EIN:
 @itemlist[
 @item{Apply @link["http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Apply-for-an-Employer-Identification-Number-%28EIN%29-Online"]{online} (you get the EIN immediately).}
-@item{@link["http://www.irs.gov/uac/Form-SS-4,-Application-for-Employer-Identification-Number-%28EIN%29"]{Fill out} form SS-4.}]
+@item{Fill out and mail in @link["http://www.irs.gov/uac/Form-SS-4,-Application-for-Employer-Identification-Number-%28EIN%29"]{Form SS-4}.}]
 
-@subsection{Worker's Compensation Insurance}
-From @link["http://www.mass.gov/lwd/workers-compensation/investigations/who-needs-workers-compensation-insurance-in.html"]{mass.gov}:
+@; subsec: worker's comp ----------------------------------------
+
+@subsection[#:style style:subsec]{Worker's Compensation Insurance}
+From the @link["http://www.mass.gov/lwd/workers-compensation/investigations/who-needs-workers-compensation-insurance-in.html"]{Massachusetts Office of Labor and Workforce Development}:
+
 @nested[#:style 'inset]{"With limited exceptions, every employer in the Commonwealth with one or more employee(s) is required by law to have a valid workers' compensation policy at all times. This "no fault" insurance not only provides injured workers with medical care and partial wage replacement, but also protects the policyholders from potentially damaging lawsuits. Although most companies in Massachusetts purchase a traditional commercial insurance policy, there are alternative methods of coverage which include licensing as a self insurer, gaining membership in a self insurance group, or obtaining coverage in the Assigned Risk Pool."}
 
-I signed up for the Massachusetts Worker's Compensation Assigned Risk Pool (MWCARP). More info available at the Massachusetts Workers' Compensation Rating and Inspection Bureau (WCRIB) @link["https://www.wcribma.org/mass/default.aspx"]{website} (though the site is pretty dense and I had trouble finding anything there).
+People hiring nannies can get coverage via the Massachusetts Worker's Compensation Assigned Risk Pool (MWCARP). Get more info @link["https://www.wcribma.org/mass/default.aspx"]{here} (though that site confused me).
 
-Most insurance agencies should be able to help you sign up for assigned risk pool. I don't remember exactly but I probably googled something like "massachusetts workers compensation insurance" and then submitted a bunch of quote requests online. I arbitrarily went with @link["http://www.berryinsurance.com"]{Berry Insurance} and the cost was $260. I think the cost is state-mandated so it probably doesn't matter who you get it through. Also, the MWCARP application they gave me to fill out did not seem company-specific.
+Most insurance agencies should be able to help you sign up for assigned risk pool. I Googled for "massachusetts workers compensation insurance" then submitted a bunch of quote requests online. I arbitrarily went with @link["http://www.berryinsurance.com"]{Berry Insurance} (they were first to reply) and the cost was $260. I think the cost is state-mandated so it probably doesn't matter who you sign up with.
+
+
+@; subsec: dependent care FSA ----------------------------------------
+@subsection[#:style style:subsec]{Dependent Care FSA}
+
+If your job provides you the benefit, sign up for a Dependent Care FSA. Then you can set aside pre-tax dollars with which to pay your nanny.
+
+Our FSA allows a $5,000 maximum annual contribution.
+
+Typically, you can only sign up for an FSA during "open enrollment", which happens once a year. But "life events" like marriage and birth give you additional open enrollments during which you can change your benefits.
 
 
 @; -------------------------------- First Day ---------------------------------
-@section{First Day}
+@section[#:tag "firstday"]{First Day}
 
 On the first day, you may want to ask your nanny to bring the following items:
 @itemlist[
@@ -89,22 +122,23 @@ We pay our nanny bimonthly (twice a month).
 
 @margin-note{The table lists the amounts withheld from the nanny's paycheck. In other words, these are the taxes that the nanny, i.e., the @emph{employee}, owes. You just pay it on the nanny's behalf. This is separate from the additional taxes that you, the @emph{employer}, has to pay.}
 
-With each paycheck, we withhold a certain amount for taxes.
+With each paycheck, we withhold a certain amount of taxes.
 
-@centered{@tabular[#:style 'boxed
-         (list 
-          (list "Taxes Withheld (2013):" 'cont 'cont)
-           (list @bold{Tax Type}   @bold{Rate} @bold{Taxable Income})
-           (list "Social Security (OASDI)"   "6.2%" "$113,700")
-           (list "Medicare"  "1.45%" "all")
-           (list @link["http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Questions-and-Answers-for-the-Additional-Medicare-Tax"]{additional Medicare} "0.90%" ">$200,000")
-           (list "Federal" "varies" "all")
-           (list "MA State" "5.25%" "all"))]}
+@centered{
+  @tabular[#:style style:table
+           (list 
+            (list "Taxes To Withhold (2013):" 'cont 'cont)
+            (list @bold{Tax Type}   @bold{Rate} @bold{Taxable Income})
+            (list "Social Security (OASDI)"   "6.2%" "$113,700")
+            (list "Medicare"  "1.45%" "all")
+            (list @link["http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Questions-and-Answers-for-the-Additional-Medicare-Tax"]{additional Medicare} "0.90%" ">$200,000")
+            (list "Federal" "varies" "all")
+            (list "MA State" "5.25%" "all"))]}
 
 
 To compute withholding for social security and medicare, just compute the percentage.
 
-@margin-note{You have to withhold social security and medicare taxes,  @link["http://www.irs.gov/publications/p926/ar02.html#en_US_2013_publink100086732"]{but I don't think withholding income tax is required}.}
+@margin-note{You have to withhold social security and medicare taxes,  @link["http://www.irs.gov/publications/p926/ar02.html#en_US_2013_publink100086732"]{but I don't think withholding income tax is required} for household employees.}
 
 For federal withholding, the IRS provides @link["http://www.irs.gov/publications/p15/ar03.html#en_US_2013_publink1000295957"]{tables} (Publication 15) to help with the calculations. MA also provides similar @link["http://www.mass.gov/dor/docs/dor/forms/wage-rpt/pdfs/circ-m12.pdf"]{tables} (circular M). 
 
@@ -165,7 +199,7 @@ All the above federal taxes, in addition to the withheld social security, medica
 
 Here is a summary of all nanny taxes that employers have to pay.
 
-@centered{@tabular[#:style 'boxed
+@centered{@tabular[#:style style:table
          (list 
           (list "Employer Taxes (2013):" 'cont 'cont  'cont)
           (list @bold{Tax}   @bold{Rate} @bold{Taxable Income} @bold{How to Pay})
@@ -191,6 +225,4 @@ Our nanny is a resident alien and is married, but her husband lives outside the 
 
 
 
-@; ------------------------------ Dependent Care FSA --------------------------
-@section{Dependent Care FSA}
 @end-post{nannypaperwork}

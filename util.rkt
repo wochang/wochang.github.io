@@ -1,12 +1,11 @@
 #lang racket
 
-(require (prefix-in sb:
-                    (combine-in ;scribble/base
-                                scribble/core
-                                scribble/html-properties
-                                ;scribble/manual
-                                ;scribble/decode
-                                )))
+(require ;scribble/base
+ scribble/core
+ scribble/html-properties
+ ;scribble/manual
+ ;scribble/decode
+ )
 
 (provide (all-defined-out))
 
@@ -32,16 +31,16 @@
 ;  (match-define (list year month day code) (current-finfo))
 ;  (define src-filename code)
 ;  (define actual-filename (format "~a-post.html" (current-tag)))
-  (sb:element
-   (sb:style #f (list (sb:alt-tag "div")
-                      (sb:attributes
+  (element
+   (style #f (list (alt-tag "div")
+                      (attributes
                        (list (cons 'id "disqus_thread")))))
    ;; XXX add script
-   (sb:element
-    (sb:style
+   (element
+    (style
      #f
      (list
-      (sb:script-property
+      (script-property
        "text/javascript"
        (list (format "var disqus_shortname = '~a';\n" DISQUS_SHORTNAME)
              (format "var disqus_identifier = '~a';\n" post-id)
@@ -58,5 +57,9 @@
    (list "Please enable JavaScript to view the "
          "comments powered by Disqus."))))
 
-
+(define style:table
+  (style #f (list (attributes
+                   (list (cons 'class "boxed")
+                         (cons 'border "1"))))))
+(define style:subsec 'unnumbered)
 
