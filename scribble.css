@@ -232,7 +232,7 @@ table td {
 /* Table of contents, left margin */
 
 .tocset {
-  position: relative;
+  position: fixed;
   float: left;
   width: 12.5em;
   margin-right: 2em;
