@@ -1,11 +1,13 @@
 #lang racket
 
-(require ;scribble/base
- scribble/core
- scribble/html-properties
- ;scribble/manual
+(require scribble/base ; subsection
+         scribble/core
+         scribble/html-properties
+          ;scribble/manual
  ;scribble/decode
- )
+         (for-syntax syntax/parse)
+;         syntax/parse
+         )
 
 (provide (all-defined-out))
 
@@ -61,5 +63,38 @@
   (style #f (list (attributes
                    (list (cons 'class "boxed")
                          (cons 'border "1"))))))
-(define style:subsec 'unnumbered)
+(define style:subsec (list 'unnumbered 'hidden))
+#;(define style:sec (list 'hidden))
 
+(define bullet:subsec "♦")
+(define bullet:subsubsec "•")
+
+#;(define-syntax (sec stx)
+  (syntax-parse stx
+    [(sec (~optional (~seq #:toc-name toc-name:expr))
+             sec-title:expr ...)
+  #`(begin
+      (section
+       #:style style:sec
+       #,@(if (attribute toc-name) #'(toc-name) #'(sec-title ...)))
+      (bold sec-title ...))]))
+
+(define-syntax (subsec stx)
+  (syntax-parse stx
+    [(subsec (~optional (~seq #:toc-name toc-name:expr))
+             subsec-title:expr ...)
+  #`(begin
+      (subsection #:style style:subsec 
+                  (hspace 1) bullet:subsec " "
+                  #,@(if (attribute toc-name) #'(toc-name) #'(subsec-title ...)))
+      (bold subsec-title ...))]))
+
+(define-syntax (subsubsec stx)
+  (syntax-parse stx
+    [(subsubsec (~optional (~seq #:toc-name toc-name:expr))
+                subsubsec-title:expr ...)
+  #`(begin
+      (subsubsection #:style style:subsec 
+                     (hspace 2)  bullet:subsubsec " "
+                     #,@(if (attribute toc-name) #'(toc-name) #'(subsubsec-title ...)))
+      (smaller (bold subsubsec-title ...)))]))
