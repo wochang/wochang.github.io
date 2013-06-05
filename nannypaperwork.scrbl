@@ -7,7 +7,7 @@
 
 @(define nanny-title "Nanny Taxes and Paperwork Guide")
 
-@(title #:tag "top" #:style 'hidden nanny-title)
+@(title #:tag "top" #:style (google-analytics 'hidden) nanny-title)
 
 @;centered{
 @(elem
@@ -18,7 +18,8 @@
                           (attributes
                            (list (cons 'class "navsettop"))))))
   
-@margin-note{@emph{Last updated:@linebreak{}} @(date->string (current-date))}
+@(parameterize ([date-display-format 'rfc2822])
+@margin-note{@emph{Last updated:@linebreak{}} @(date->string (current-date))})
 
 This page describes the taxes and paperwork you have to file when hiring a nanny.
 
