@@ -54,9 +54,9 @@ From the @link["http://www.mass.gov/lwd/workers-compensation/investigations/who-
 
 @nested[#:style 'inset]{"With limited exceptions, every employer in the Commonwealth with one or more employee(s) is required by law to have a valid workers' compensation policy at all times. This "no fault" insurance not only provides injured workers with medical care and partial wage replacement, but also protects the policyholders from potentially damaging lawsuits. Although most companies in Massachusetts purchase a traditional commercial insurance policy, there are alternative methods of coverage which include licensing as a self insurer, gaining membership in a self insurance group, or obtaining coverage in the Assigned Risk Pool."}
 
-People hiring nannies can get coverage via the Massachusetts Worker's Compensation Assigned Risk Pool (MWCARP). Get more info @link["https://www.wcribma.org/mass/default.aspx"]{here} (though that site confused me).
+Nanny employers can get coverage via the Massachusetts Worker's Compensation Assigned Risk Pool (MWCARP). Get more info @link["https://www.wcribma.org/mass/default.aspx"]{here} (though this site confuses me).
 
-Most insurance agencies should be able to help you sign up for assigned risk pool. I Googled for "massachusetts workers compensation insurance" then submitted a bunch of quote requests online. I arbitrarily went with @link["http://www.berryinsurance.com"]{Berry Insurance} (they were first to reply) and the cost was $260. I think the cost is state-mandated so it probably doesn't matter who you sign up with.
+Most insurance agencies should be able to sign you up for assigned risk pool. I Googled for "massachusetts workers compensation insurance" then submitted a bunch of quote requests online. I arbitrarily went with @link["http://www.berryinsurance.com"]{Berry Insurance} (they were first to reply) and the cost was $260. I think the cost is state-mandated so it probably doesn't matter who you sign up with.
 
 
 @; subsec: dependent care FSA ----------------------------------------
@@ -123,7 +123,7 @@ You need this form when determining how much state tax to withhold from your nan
 @;subsec: vaccines ----------------------------------------
 @subsec{Vaccinations}
 
-Finally, you may want to ask your nanny for a vaccination record, or to get some vaccines. For example, there was a pertussis (whooping cough) outbreak at the time we interviewed our nanny and our pediatrician recommended getting the TdaP vaccine.
+Finally, you may want to ask your nanny for a vaccination record, and/or to get some vaccines. For example, there was a pertussis (whooping cough) outbreak when we hired our nanny and our pediatrician recommended getting the TdaP booster vaccine.
 
 
 
@@ -138,18 +138,14 @@ We pay our nanny bimonthly (twice a month).
 
 Along with each paycheck, we also give our nanny a paystub with the following information:
 @itemlist[
- @item{pay date}
- @item{pay period start / end}
- @item{employee's name and address}
- @item{employer's name and address}
- @item{nanny's filing status (federal and state) and allowances (as reported on forms W-4 and M-4)}
- @item{current and year-to-date salary paid}
- @item{current and year-to-date federal tax withheld}
- @item{current and year-to-date Medicare tax withheld}
- @item{current and year-to-date Social Security tax withheld}
- @item{current and year-to-date MA tax withheld}
- @item{total and year-to-date taxes withheld}
- @item{current and year-to-date net salary paid}
+ @item{pay date, pay period start / end}
+ @item{employee/employer's name and address}
+ @item{nanny's filing status and allowances (as reported on forms W-4 and M-4)}
+ @item{current and year-to-date:
+ @itemlist[
+  @item{salary paid}
+  @item{federal, SS, Medicare, MA, and total taxes withheld}
+  @item{net salary paid}]}
  @item{check number}
  @item{vacation days used}
  ]
@@ -173,7 +169,7 @@ Here are the taxes we withhold on each paycheck.
             (list "MA State" "5.25%" "all"))]}
 
 
-To compute withholding for social security and medicare, just compute the percentage. Note that starting 2013, there's an additional Medicare tax of 0.90% for income over $200,000 (for single filters, the limit is $250,000 for married filers).
+To compute withholding for social security and medicare, just compute the percentage. Note that starting 2013, there's an additional Medicare tax of 0.90% for income over $200,000 (for single filers; the threshold is $250,000 for married filers).
 
 @margin-note{You have to withhold social security and medicare taxes,  @link["http://www.irs.gov/publications/p926/ar02.html#en_US_2013_publink100086732"]{but I don't think withholding income tax is required} for household employees. You should discuss with your nanny.}
 
@@ -190,9 +186,9 @@ Even if you withhold and pay your nanny's taxes on your tax return, your nanny s
 
 @subsec[#:toc-name "Form W-2 (IRS)"]{IRS Form W-2, Wage and Tax Statement}
 
-At the end of the year, you have to give your nanny a @link["http://www.irs.gov/uac/Form-W-2,-Wage-and-Tax-Statement"]{W-2 Form}. Look at @link["http://www.irs.gov/instructions/iw2w3/index.html"]{these instructions} to determine where you have to submit this form.
+At the end of the year, you have to give your nanny a @link["http://www.irs.gov/uac/Form-W-2,-Wage-and-Tax-Statement"]{W-2 Form}.  @link["http://www.irs.gov/instructions/iw2w3/index.html"]{These instructions} tell you where to submit copies of the form.
 
-@subsec{@link["http://www.irs.gov/publications/p501/ar02.html#en_US_2012_publink1000220721"]{A Note on Filing Status}}
+@subsec{A Note on @link["http://www.irs.gov/publications/p501/ar02.html#en_US_2012_publink1000220721"]{Filing Status}}
 
 Our nanny is a resident alien and is married, but her husband lives outside the US and does not have a social security number.
 
@@ -247,7 +243,7 @@ Residents in a @link["http://www.irs.gov/Businesses/Small-Businesses-&-Self-Empl
 
 @subsubsec{Schedule H}
 
-All the above federal taxes, in addition to the withheld Social Security, Medicare, and federal income taxes for your nanny, are paid on your federal tax return, on a @link["http://www.irs.gov/instructions/i1040sh/"]{Schedule H} form. (If you use any sort of tax software, it should automatically get generated for you.)
+All the above federal taxes, in addition to the Social Security, Medicare, and federal income taxes you withheld from your nanny's paycheck, are reported on your federal tax return, using the @link["http://www.irs.gov/instructions/i1040sh/"]{Schedule H} form. (If you use any sort of tax software, this form should automatically get generated for you.)
 
 @subsec{Employer Taxes Summary}
 
