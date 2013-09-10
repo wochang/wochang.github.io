@@ -59,6 +59,7 @@ Nanny employers can get coverage via the Massachusetts Worker's Compensation Ass
 
 Most insurance agencies should be able to sign you up for assigned risk pool. I Googled for "massachusetts workers compensation insurance" then submitted a bunch of quote requests online. I arbitrarily went with @link["http://www.berryinsurance.com"]{Berry Insurance} (they were first to reply) and the cost was $260. I think the cost is state-mandated so it probably doesn't matter who you sign up with.
 
+@italic{UPDATE:} I renewed the worker's comp policy after one year and I was audited to submit employee name and wage information. I was able to submit the information online. I don't know if this is a state rule or if it is company-specific.
 
 @; subsec: dependent care FSA ----------------------------------------
 @subsec{Dependent Care FSA}
