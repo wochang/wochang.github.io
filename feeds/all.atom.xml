@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">My Awesome Blog: All Posts</title>
+ <link rel="self" href="http://www.example.com/feeds/all.atom.xml" />
+ <link href="http://www.example.com/blog/index.html" />
+ <id>urn:http-www-example-com:-blog-index-html</id>
+ <updated>N/A</updated></feed>
