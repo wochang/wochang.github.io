@@ -190,6 +190,8 @@ Even if you withhold and pay your nanny's taxes on your tax return, your nanny s
 
 At the end of the year, you have to give your nanny a @link["http://www.irs.gov/uac/Form-W-2,-Wage-and-Tax-Statement"]{W-2 Form}.  @link["http://www.irs.gov/instructions/iw2w3/index.html"]{These instructions} tell you where to submit copies of the form.
 
+UPDATE: I didn't submit the W-2 to the IRS and I got a letter from the Social Security Administration (SSA) saying that there was a mismatch of information. To fix this, I went to the @link["http://www.socialsecurity.gov/employer"]{SSA website}, registered, and submitted the appropriate W-2 and W-3 forms.
+
 @subsec{A Note on @link["http://www.irs.gov/publications/p501/ar02.html#en_US_2012_publink1000220721"]{Filing Status}}
 
 Our nanny is a resident alien and is married, but her husband lives outside the US and does not have a social security number.
